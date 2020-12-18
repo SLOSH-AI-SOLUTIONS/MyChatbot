@@ -1,9 +1,4 @@
-# Code based on work from:
-# Author: Olivier Grisel <olivier.grisel@ensta.org>
-#         Lars Buitinck
-#         Chyi-Kwei Yau <chyikwei.yau@gmail.com>
-# License: BSD 3 clause
-# URL: http://scikit-learn.org/stable/auto_examples/applications/topics_extraction_with_nmf_lda.html
+
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF, LatentDirichletAllocation
