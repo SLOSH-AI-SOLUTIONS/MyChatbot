@@ -62,11 +62,7 @@ class ContextRecognition:
     def load_corpus(self, path_to_corpus):
         # path = path_to_corpus
         sentence_index = 0
-        # for subdir, dirs, files in os.walk(path):
-        #     for file in files:
-        #         file_path = subdir + os.path.sep + file
-        #         #Check that the file is not empty
-        #         if os.path.getsize(file_path) > 0:
+       
         document = open("./corpus/movie_lines_cleaned.txt", 'r')
         text = document.read()
         lowers = text.lower()
@@ -89,7 +85,7 @@ class ContextRecognition:
         cosine_similarities = linear_kernel(input_sentence_converted, self.tf_idf_matrix).flatten()
         related_docs_indices = cosine_similarities.argsort()[:-5:-1]
         related_doc_scores = cosine_similarities[related_docs_indices]
-        # print(token_dict[related_docs_indices[2]], token_dict[related_docs_indices[3]])
+        
         if related_doc_scores[0] > 0:
             best_match = token_dict[related_docs_indices[0]]
             correlation = related_doc_scores[0]
